@@ -6,12 +6,13 @@ public class GameOverOnTrigger2D : MonoBehaviour
 {
     [Tooltip("Every object tagged with this tag will trigger game over")]
     [SerializeField] string triggeringTag;
+    [SerializeField] string secondTrigger;
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == triggeringTag && enabled) {
+        if ((other.tag == secondTrigger || other.tag == triggeringTag) && enabled) {
             Debug.Log("Game over!");
             Application.Quit();
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
         }
     }
 

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3928880668046269437}
   - component: {fileID: 4202652755164059409}
   - component: {fileID: 3766115511357892571}
+  - component: {fileID: -8403850856064247095}
   m_Layer: 0
   m_Name: EnemySaucerWithColliderAndDestruction
   m_TagString: Enemy
@@ -49,6 +50,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -206,3 +209,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggeringTag: Laser
+  secondTriggerTag: 
+--- !u!114 &-8403850856064247095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7837289214103786379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3228241f08111574ba6c963a9954c0d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: -8174082763414692884, guid: 500de96d0cba87f41ad1daec7613f93e,
+    type: 3}
+  velocityOfSpawnedObject: {x: 0, y: 0, z: 0}
+  timeBetweenSpawns: 10
+  speed: 6

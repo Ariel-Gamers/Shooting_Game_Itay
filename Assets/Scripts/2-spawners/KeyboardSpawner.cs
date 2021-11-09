@@ -10,6 +10,8 @@ public class KeyboardSpawner: MonoBehaviour {
     [SerializeField] protected KeyCode keyToPress;
     [SerializeField] protected GameObject prefabToSpawn;
     [SerializeField] protected Vector3 velocityOfSpawnedObject;
+    [SerializeField] protected float limit = 0.5f; // the limited shot count
+    private float time_counter = 0f; // counts the time since you last shot
 
     protected virtual GameObject spawnObject() {
         // Step 1: spawn the new object.
@@ -27,8 +29,14 @@ public class KeyboardSpawner: MonoBehaviour {
     }
 
     private void Update() {
+        time_counter += Time.deltaTime;
+        if(time_counter < limit)
+        {
+            return;
+        }
         if (Input.GetKeyDown(keyToPress)) {
             spawnObject();
+            time_counter = 0;
         }
     }
 }
