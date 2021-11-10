@@ -15,7 +15,7 @@ I created a script called `DebrisShooter` which spawns a prefab from every porta
 Each spawn first calculates the vector of the player as well as its current position
 it then calcualtes the vector needed for the velocity
 ```csharp
-Vector3 starting_point = base.transform.position;
+            Vector3 starting_point = base.transform.position;
             Vector3 ending_point = player.transform.position;
 
             Vector3 velocity_vector = (ending_point - starting_point);
